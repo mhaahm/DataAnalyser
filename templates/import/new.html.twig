@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} New Import {% endblock %}
+
+{% block body %}
+  <!-- .page-navs -->
+  <header class="page-navs shadow-sm pr-3">
+    <!-- .btn-account -->
+    <a href="page-project.html" class="btn-account">
+      <div class="has-badge">
+        <span class="tile bg-pink text-white">IMP</span> <span class="user-avatar-xs"></span>
+      </div>
+      <div class="account-summary" style="margin-top: 12px;">
+        <h1 class="card-title"> New Import </h1>
+      </div>
+    </a>
+
+    <div class="ml-auto">
+      <div class="dropdown d-inline-block">
+        <button type="button" class="btn btn-light btn-icon" title="Invite members" data-toggle="dropdown" data-display="static" aria-haspoppup="true" aria-expanded="false"><i class="fas fa-user-plus"></i></button>
+        <div class="dropdown-arrow"></div><!-- .dropdown-menu -->
+        <div class="dropdown-menu dropdown-menu-right dropdown-menu-rich stop-propagation">
+          <div class="dropdown-header"> Add members </div>
+          <div class="form-group px-3 py-2 m-0">
+            <input type="text" class="form-control" placeholder="e.g. @bent10" data-toggle="tribute" data-remote="assets/data/tribute.json" data-menu-container="#people-list" data-item-template="true" autofocus=""> <small class="form-text text-muted">Search people by username or email address to invite them.</small>
+          </div>
+          <div id="people-list" class="tribute-inline stop-propagation"></div><a href="#!" class="dropdown-footer">Invite member by link <i class="far fa-clone"></i></a>
+        </div><!-- /.dropdown-menu -->
+      </div><!-- /invite members -->
+      <button type="button" class="btn btn-light btn-icon" data-toggle="page-expander" title="Expand board"><i class="oi oi-fullscreen-enter fa-rotate-90 fa-fw"></i></button> <button type="button" class="btn btn-light btn-icon" data-toggle="modal" data-target="#modalBoardConfig" title="Show menu"><i class="fa fa-cog fa-fw"></i></button>
+    </div><!-- /right actions -->
+  </header><!-- /.page-navs -->
+  <div class="card mt-5">
+    <!-- .steps -->
+    <section class="steps steps-float">
+      <ul>
+        <li class="success active">
+          <a href="#!" tabindex="-1" class="js-step" container="confiImport"><span class="step-indicator step-indicator-icon"><i class="oi oi-wrench"></i></span> <span class="d-none d-sm-inline">Import Configuration</span></a>
+        </li>
+        <li class="success">
+          <a href="#!" tabindex="-1" class="js-step" container="uploadFile"><span class="step-indicator step-indicator-icon"><i class="oi oi-data-transfer-upload"></i></span> <span class="d-none d-sm-inline">Upload File</span></a>
+        </li>
+        <li class="success">
+          <a href="#!" tabindex="-1" class="js-step" container="preview"><span class="step-indicator step-indicator-icon"><i class="oi oi-list"></i></span> <span class="d-none d-sm-inline">Preview</span></a>
+        </li>
+        <li class="success">
+          <a href="#!" tabindex="-1" class="js-step" container="report"><span class="step-indicator step-indicator-icon"><i class="oi oi-dashboard"></i></span> <span class="d-none d-sm-inline">Report</span></a>
+        </li>
+      </ul>
+    </section>
+
+    <div class="card-body activeStep js-card" id="confiImport">
+      confiImport
+    </div>
+    <div class="card-body disableStep js-card" id="uploadFile">
+      uploadFile
+    </div>
+
+    <div class="card-body disableStep js-card" id="preview">
+      preview
+    </div>
+
+    <div class="card-body disableStep js-card" id="report">
+      report
+    </div>
+  </div>
+{% endblock %}

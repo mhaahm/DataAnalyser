@@ -1,0 +1,103 @@
+<aside class="app-aside app-aside-light">
+    <!-- .aside-content -->
+    <div class="aside-content">
+        <!-- .aside-header -->
+        <header class="aside-header">
+            <!-- toggle menu -->
+            <button class="hamburger hamburger-squeeze" type="button" data-toggle="aside" aria-label="Menu" aria-controls="navigation"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button> <!-- /toggle menu -->
+            <!-- .btn-account -->
+            <button class="btn-account d-flex d-md-none" type="button" data-toggle="collapse" data-target="#dropdown-aside"><span class="user-avatar user-avatar-lg"><img src="assets/images/avatars/profile.jpg" alt=""></span> <span class="account-icon"><span class="fa fa-caret-down fa-lg"></span></span> <span class="account-summary"><span class="account-name">Beni Arisandi</span> <span class="account-description">Marketing Manager</span></span></button> <!-- /.btn-account -->
+            <!-- .dropdown-aside -->
+            <div id="dropdown-aside" class="dropdown-aside d-md-none collapse">
+                <!-- dropdown-items -->
+                <div class="pb-3">
+                    <a class="dropdown-item" href="user-profile.html"><span class="dropdown-icon oi oi-person"></span> Profile</a> <a class="dropdown-item" href="auth-signin-v1.html"><span class="dropdown-icon oi oi-account-logout"></span> Logout</a>
+                    <div class="dropdown-divider"></div><a class="dropdown-item" href="#!">Help Center</a> <a class="dropdown-item" href="#!">Ask Forum</a> <a class="dropdown-item" href="#!">Keyboard Shortcuts</a>
+                </div><!-- /dropdown-items -->
+            </div><!-- /.dropdown-aside -->
+            <!-- .top-bar-brand -->
+            <div class="top-bar-brand bg-primary">
+                <a href="index-2.html"><img src="assets/images/brand-inverse.png" height="32" alt=""></a>
+            </div><!-- /.top-bar-brand -->
+        </header><!-- /.aside-header -->
+        <!-- .aside-menu -->
+        <section class="aside-menu">
+            <!-- .stacked-menu -->
+            <nav id="stacked-menu" class="stacked-menu">
+                <!-- .menu -->
+                <ul class="menu">
+                    <!-- .menu-item -->
+                    <li class="menu-item has-child has-open">
+                        <a href="#" class="menu-link"><span class="menu-icon oi oi-wrench"></span>
+                            <span class="menu-text">Imports </span></a>
+                        <ul class="menu">
+                            <li class="menu-item">
+                                <a href="{{ path('import.new') }}" class="menu-link">Import</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="page-project-board.html" class="menu-link">List Import</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="page-project-gantt.html" class="menu-link">List file</a>
+                            </li>
+                        </ul>
+                    </li><!-- /.menu-item -->
+                    <li class="menu-item has-child">
+                        <a href="#" class="menu-link"><span class="menu-icon far fa-file"></span> <span class="menu-text">Dashboards</span> <span class="badge badge-warning">New</span></a> <!-- child menu -->
+                        <ul class="menu">
+                            <li class="menu-item">
+                                <a href="page-clients.html" class="menu-link">Dashboards Configuration</a>
+                            </li>
+                            <li class="menu-item has-child">
+                                <a href="#" class="menu-link">Published dashboard</a>
+                                <ul class="menu">
+                                    <li class="menu-item">
+                                        <a href="page-team.html" class="menu-link">Dashboard 1</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="page-team-feeds.html" class="menu-link">Dashboard 2</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="page-team-projects.html" class="menu-link">Dashboard 3</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="page-team-members.html" class="menu-link">Dashboard 4</a>
+                                    </li>
+                                </ul><!-- /grand child menu -->
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="menu-item has-child">
+                        <a href="#" class="menu-link"><span class="menu-icon oi oi-brush"></span>
+                            <span class="menu-text">Data Quality</span></a>
+                        <ul class="menu">
+                            <li class="menu-item">
+                                <a href="auth-comingsoon-v1.html" class="menu-link">Import data quality</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="auth-comingsoon-v2.html" class="menu-link">Import data changes</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="auth-cookie-consent.html" class="menu-link">Import Inconsistency</a>
+                            </li>
+                        </ul><!-- /child menu -->
+                    </li><!-- /.menu-item -->
+                    <!-- .menu-item -->
+                    <li class="menu-item has-child">
+                        <a href="#" class="menu-link"><span class="menu-icon oi oi-list"></span> <span class="menu-text">Data Inventory</span></a> <!-- child menu -->
+                        <ul class="menu">
+                            <li class="menu-item">
+                                <a href="user-profile.html" class="menu-link">Data Inventory configuration</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="user-activities.html" class="menu-link">List Inventory</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </div>
+</aside>

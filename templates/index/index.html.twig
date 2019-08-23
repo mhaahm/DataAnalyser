@@ -1,0 +1,221 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+   <div class="page-inner page-inner-fill">
+      <!-- .page-navs -->
+      <header class="page-navs shadow-sm pr-3">
+         <!-- .btn-account -->
+         <a href="page-project.html" class="btn-account">
+            <div class="has-badge">
+               <span class="tile bg-pink text-white">IMP</span> <span class="user-avatar-xs"></span>
+            </div>
+            <div class="account-summary">
+               <h1 class="card-title"> Configured Imports </h1>
+               <h6 class="card-subtitle text-muted"> 12 imports </h6>
+            </div>
+         </a> <!-- /.btn-account -->
+         <!-- right actions -->
+         <div class="ml-auto">
+            <!-- invite members -->
+            <div class="dropdown d-inline-block">
+               <button type="button" class="btn btn-light btn-icon" title="Invite members" data-toggle="dropdown" data-display="static" aria-haspoppup="true" aria-expanded="false"><i class="fas fa-user-plus"></i></button>
+               <div class="dropdown-arrow"></div><!-- .dropdown-menu -->
+               <div class="dropdown-menu dropdown-menu-right dropdown-menu-rich stop-propagation">
+                  <div class="dropdown-header"> Add members </div>
+                  <div class="form-group px-3 py-2 m-0">
+                     <input type="text" class="form-control" placeholder="e.g. @bent10" data-toggle="tribute" data-remote="assets/data/tribute.json" data-menu-container="#people-list" data-item-template="true" autofocus=""> <small class="form-text text-muted">Search people by username or email address to invite them.</small>
+                  </div>
+                  <div id="people-list" class="tribute-inline stop-propagation"></div><a href="#!" class="dropdown-footer">Invite member by link <i class="far fa-clone"></i></a>
+               </div><!-- /.dropdown-menu -->
+            </div><!-- /invite members -->
+            <button type="button" class="btn btn-light btn-icon" data-toggle="page-expander" title="Expand board"><i class="oi oi-fullscreen-enter fa-rotate-90 fa-fw"></i></button> <button type="button" class="btn btn-light btn-icon" data-toggle="modal" data-target="#modalBoardConfig" title="Show menu"><i class="fa fa-cog fa-fw"></i></button>
+         </div><!-- /right actions -->
+      </header><!-- /.page-navs -->
+      <!-- .board -->
+      <div id="board" class="board" data-toggle="sortable" data-draggable=".tasks" data-handle=".task-header" data-delay="100" data-force-fallback="true">
+         <div class="task-parent">
+            <section class="tasks">
+
+               <header class="task-header">
+                  <h3 class="task-title mr-auto"> Import name <span class="badge text-muted">(3)</span>
+                  </h3><!-- .btn -->
+                  <button class="btn btn-light btn-icon text-muted" data-toggle="modal" data-target="#modalNewTask" title="Add task"><i class="fa fa-plus-circle"></i></button> <!-- /.btn -->
+                  <!-- .dropdown -->
+                  <div class="dropdown">
+                     <!-- .btn -->
+                     <button class="btn btn-light btn-icon text-muted" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></button> <!-- /.btn -->
+                     <div class="dropdown-arrow"></div><!-- .dropdown-menu -->
+                     <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#!" class="dropdown-item">Edit</a> <a href="#!" class="dropdown-item">Move</a> <a href="#!" class="dropdown-item">Duplicate</a> <a href="#!" class="dropdown-item">Subcribe</a> <a href="#!" class="dropdown-item">Trash</a>
+                     </div><!-- /.dropdown-menu -->
+                  </div>
+               </header>
+               <div class="task-body" data-toggle="sortable" data-group="tasks" data-delay="50" data-force-fallback="true">
+                  <div class="task-issue">
+                     <div class="card">
+                        <header class="card-header">
+                           <h4 class="card-title">
+                              <a href="#!" data-toggle="modal" data-target="#modalViewTask">Last date import</a>
+                           </h4>
+                           <h6 class="card-subtitle text-muted">
+                              <time class="text-muted">03:11</time> / <time class="text-muted">6:00</time> <span class="mx-1">·</span> <span class="due-date"><i class="far fa-fw fa-clock"></i> Apr 07</span>
+                           </h6>
+                        </header>
+                        <!-- .card-body -->
+                        <div class="card-body pt-0">
+                           <!-- .list-group -->
+                           <div class="list-group">
+                              <!-- .list-group-item -->
+                              <a href="#!" class="list-group-item" data-toggle="modal" data-target="#modalViewTask">
+                                 <!-- .list-group-item-body -->
+                                 <div class="list-group-item-body">
+                                    import desc
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </section>
+            <section class="tasks">
+
+               <header class="task-header">
+                  <h3 class="task-title mr-auto"> Import name <span class="badge text-muted">(3)</span>
+                  </h3><!-- .btn -->
+                  <button class="btn btn-light btn-icon text-muted" data-toggle="modal" data-target="#modalNewTask" title="Add task"><i class="fa fa-plus-circle"></i></button> <!-- /.btn -->
+                  <!-- .dropdown -->
+                  <div class="dropdown">
+                     <!-- .btn -->
+                     <button class="btn btn-light btn-icon text-muted" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></button> <!-- /.btn -->
+                     <div class="dropdown-arrow"></div><!-- .dropdown-menu -->
+                     <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#!" class="dropdown-item">Edit</a> <a href="#!" class="dropdown-item">Move</a> <a href="#!" class="dropdown-item">Duplicate</a> <a href="#!" class="dropdown-item">Subcribe</a> <a href="#!" class="dropdown-item">Trash</a>
+                     </div><!-- /.dropdown-menu -->
+                  </div>
+               </header>
+               <div class="task-body" data-toggle="sortable" data-group="tasks" data-delay="50" data-force-fallback="true">
+                  <div class="task-issue">
+                     <div class="card">
+                        <header class="card-header">
+                           <h4 class="card-title">
+                              <a href="#!" data-toggle="modal" data-target="#modalViewTask">Last date import</a>
+                           </h4>
+                           <h6 class="card-subtitle text-muted">
+                              <time class="text-muted">03:11</time> / <time class="text-muted">6:00</time> <span class="mx-1">·</span> <span class="due-date"><i class="far fa-fw fa-clock"></i> Apr 07</span>
+                           </h6>
+                        </header>
+                        <!-- .card-body -->
+                        <div class="card-body pt-0">
+                           <!-- .list-group -->
+                           <div class="list-group">
+                              <!-- .list-group-item -->
+                              <a href="#!" class="list-group-item" data-toggle="modal" data-target="#modalViewTask">
+                                 <!-- .list-group-item-body -->
+                                 <div class="list-group-item-body">
+                                    import desc
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </section>
+            <section class="tasks">
+
+               <header class="task-header">
+                  <h3 class="task-title mr-auto"> Import name <span class="badge text-muted">(3)</span>
+                  </h3><!-- .btn -->
+                  <button class="btn btn-light btn-icon text-muted" data-toggle="modal" data-target="#modalNewTask" title="Add task"><i class="fa fa-plus-circle"></i></button> <!-- /.btn -->
+                  <!-- .dropdown -->
+                  <div class="dropdown">
+                     <!-- .btn -->
+                     <button class="btn btn-light btn-icon text-muted" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></button> <!-- /.btn -->
+                     <div class="dropdown-arrow"></div><!-- .dropdown-menu -->
+                     <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#!" class="dropdown-item">Edit</a> <a href="#!" class="dropdown-item">Move</a> <a href="#!" class="dropdown-item">Duplicate</a> <a href="#!" class="dropdown-item">Subcribe</a> <a href="#!" class="dropdown-item">Trash</a>
+                     </div><!-- /.dropdown-menu -->
+                  </div>
+               </header>
+               <div class="task-body" data-toggle="sortable" data-group="tasks" data-delay="50" data-force-fallback="true">
+                  <div class="task-issue">
+                     <div class="card">
+                        <header class="card-header">
+                           <h4 class="card-title">
+                              <a href="#!" data-toggle="modal" data-target="#modalViewTask">Last date import</a>
+                           </h4>
+                           <h6 class="card-subtitle text-muted">
+                              <time class="text-muted">03:11</time> / <time class="text-muted">6:00</time> <span class="mx-1">·</span> <span class="due-date"><i class="far fa-fw fa-clock"></i> Apr 07</span>
+                           </h6>
+                        </header>
+                        <!-- .card-body -->
+                        <div class="card-body pt-0">
+                           <!-- .list-group -->
+                           <div class="list-group">
+                              <!-- .list-group-item -->
+                              <a href="#!" class="list-group-item" data-toggle="modal" data-target="#modalViewTask">
+                                 <!-- .list-group-item-body -->
+                                 <div class="list-group-item-body">
+                                    import desc
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </section>
+            <section class="tasks">
+
+               <header class="task-header">
+                  <h3 class="task-title mr-auto"> Import name <span class="badge text-muted">(3)</span>
+                  </h3><!-- .btn -->
+                  <button class="btn btn-light btn-icon text-muted" data-toggle="modal" data-target="#modalNewTask" title="Add task"><i class="fa fa-plus-circle"></i></button> <!-- /.btn -->
+                  <!-- .dropdown -->
+                  <div class="dropdown">
+                     <!-- .btn -->
+                     <button class="btn btn-light btn-icon text-muted" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></button> <!-- /.btn -->
+                     <div class="dropdown-arrow"></div><!-- .dropdown-menu -->
+                     <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#!" class="dropdown-item">Edit</a> <a href="#!" class="dropdown-item">Move</a> <a href="#!" class="dropdown-item">Duplicate</a> <a href="#!" class="dropdown-item">Subcribe</a> <a href="#!" class="dropdown-item">Trash</a>
+                     </div><!-- /.dropdown-menu -->
+                  </div>
+               </header>
+               <div class="task-body" data-toggle="sortable" data-group="tasks" data-delay="50" data-force-fallback="true">
+                  <div class="task-issue">
+                     <div class="card">
+                        <header class="card-header">
+                           <h4 class="card-title">
+                              <a href="#!" data-toggle="modal" data-target="#modalViewTask">Last date import</a>
+                           </h4>
+                           <h6 class="card-subtitle text-muted">
+                              <time class="text-muted">03:11</time> / <time class="text-muted">6:00</time> <span class="mx-1">·</span> <span class="due-date"><i class="far fa-fw fa-clock"></i> Apr 07</span>
+                           </h6>
+                        </header>
+                        <!-- .card-body -->
+                        <div class="card-body pt-0">
+                           <!-- .list-group -->
+                           <div class="list-group">
+                              <!-- .list-group-item -->
+                              <a href="#!" class="list-group-item" data-toggle="modal" data-target="#modalViewTask">
+                                 <!-- .list-group-item-body -->
+                                 <div class="list-group-item-body">
+                                    import desc
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </section>
+         </div>
+
+      </div><!-- /.board -->
+   </div><!-- /.page-inner -->
+   </div><!-- /.page -->
+{% endblock %}
