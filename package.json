@@ -1,6 +1,6 @@
 {
     "devDependencies": {
-        "@symfony/webpack-encore": "^0.22.0",
+        "@symfony/webpack-encore": "^4.2.0",
         "vue2-simplert": "^1.0.0",
         "webpack-notifier": "^1.6.0"
     },
@@ -16,7 +16,7 @@
         "axios": "^0.18.0",
         "bootstrap-vue": "^2.0.0-rc.11",
         "vue": "^2.5.21",
-        "vue-loader": "^15.4.2",
+        "vue-loader": "^17.0.1",
         "vue-resource": "^1.5.1",
         "vue-router": "^3.0.2",
         "vue-summernote": "^1.0.3",
